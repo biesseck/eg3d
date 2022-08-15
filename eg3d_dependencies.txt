@@ -1,0 +1,25 @@
+# eg3d dependencies - made by Bernardo Biesseck (biesseck@gmail.com)
+
+# INSTALL DEPENDENCIES:
+conda create --name bjgbiesseck_eg3d python=3.8 libgcc-ng=9.3.0
+conda install -c pytorch pytorch=1.11.0 torchvision=0.12.0 torchaudio=0.11.0 cudatoolkit=11.3
+conda install -c anaconda click
+conda install -c conda-forge imageio
+conda install -c conda-forge scipy
+conda install -c conda-forge tqdm
+conda install -c conda-forge mrcfile
+conda install -c conda-forge gcc=9.4.0
+conda install -c conda-forge ninja
+pip install imageio-ffmpeg
+
+
+
+# DOWNLOAD TRAINED MODELS:
+mkdir networks
+cd networks
+wget 'https://api.ngc.nvidia.com/v2/models/nvidia/research/eg3d/versions/1/files/ffhq512-128.pkl'
+wget 'https://api.ngc.nvidia.com/v2/models/nvidia/research/eg3d/versions/1/files/afhqcats512-128.pkl'
+wget 'https://api.ngc.nvidia.com/v2/models/nvidia/research/eg3d/versions/1/files/ffhqrebalanced512-128.pkl'
+wget 'https://api.ngc.nvidia.com/v2/models/nvidia/research/eg3d/versions/1/files/ffhqrebalanced512-64.pkl'
+wget 'https://api.ngc.nvidia.com/v2/models/nvidia/research/eg3d/versions/1/files/shapenetcars128-64.pkl'
+cd ..
